@@ -5,7 +5,8 @@
 - [x] https://cloud.redhat.com/blog/the-openshift-troubleshooting-workshop
 - [ ] https://start.learning.redhat.com/
 - [x] https://towardsdatascience.com/troubleshooting-openshift-clusters-and-workloads-382664018935
-~~ https://blog.clairvoyantsoft.com/openshift-troubleshooting-aa7cc67b0334~~
+
+~~https://blog.clairvoyantsoft.com/openshift-troubleshooting-aa7cc67b0334~~
 
 ~~https://github.com/redhat-cop/openshift-migration-best-practices/blob/main/05-troubleshooting.md~~
 
