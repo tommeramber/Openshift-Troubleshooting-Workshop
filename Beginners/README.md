@@ -4,7 +4,7 @@
 - [x] https://openshift.tips/troubleshooting/
 - [x] https://cloud.redhat.com/blog/the-openshift-troubleshooting-workshop
 - [ ] https://start.learning.redhat.com/
-- [ ] https://towardsdatascience.com/troubleshooting-openshift-clusters-and-workloads-382664018935
+- [x] https://towardsdatascience.com/troubleshooting-openshift-clusters-and-workloads-382664018935
 - [ ] https://blog.clairvoyantsoft.com/openshift-troubleshooting-aa7cc67b0334
 - [ ] https://github.com/redhat-cop/openshift-migration-best-practices/blob/main/05-troubleshooting.md
 - [ ] https://access.redhat.com/documentation/en-us/openshift_container_platform/4.7/html/support/troubleshooting
@@ -40,7 +40,11 @@ sh # bash
 
 ```bash
 oc get clusterversion,nodes,clusteroperators,mcp
+oc describe clusterversion
+
+oc status
 ```
+
 ```bash
 oc get pods -A -o wide | grep -v -E 'Completed|Running'
 ```
@@ -48,6 +52,24 @@ oc get pods -A -o wide | grep -v -E 'Completed|Running'
 
 ```bash
 oc logs -f pod/<POD> -n <NS
+oc exec -it POD -c <Container_NAME> -- bash
+oc rsh <POD> -c <Container_NAME>
+oc cp podname:/logs/messages.log messages.log
+```
+
+```bash
+oc rsh pod
+sh# bash
+[Node]# curl other_svc.NS.cluster.svc.local
+[node]# nslookup <IP>
+
+oc get svc
+oc get endpoints => no endpoints (fuked selector)
+```
+
+```bash
+oc get pod podname -o yaml | oc adm policy scc-subject-review -f -
+oc adm policy scc-subject-review -z builder
 ```
 
 ```bash
