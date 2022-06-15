@@ -19,6 +19,9 @@
 * icsp bug
 * trigger bug
 * service points to wrong label
+* pv of important component full
+* DNS forwarder bug
+* pv pending - wrong type
 
 ```bash
 oc get clusterversion,nodes,clusteroperators,mcp
