@@ -22,6 +22,21 @@
 * pv of important component full
 * DNS forwarder bug
 * pv pending - wrong type
+* SCC & RBAC restriction
+
+```bash
+oc adm top nodes
+oc adm top node/<NODE>
+oc adm top nodes -l node-role.kubernetes.io/worker
+```
+
+```bash
+oc debug nodes/node-name
+sh # chroot /host
+sh # bash
+[node]# crictl ps
+[node]# systemctl status kubelet.service
+```
 
 ```bash
 oc get clusterversion,nodes,clusteroperators,mcp
