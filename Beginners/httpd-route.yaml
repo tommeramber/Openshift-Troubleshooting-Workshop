@@ -1,0 +1,38 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2022-06-15T13:46:08Z"
+  labels:
+    app: httpd
+    app.kubernetes.io/component: httpd
+    app.kubernetes.io/instance: httpd
+    app.kubernetes.io/name: httpd
+    app.kubernetes.io/part-of: httpd-app
+  name: httpd
+  namespace: tommer-test
+  resourceVersion: "1053066"
+  uid: 53119bee-746d-49c1-a58b-726dbc056bab
+spec:
+  host: httpd-tommer-test.apps.cluster-vkkl4.vkkl4.sandbox853.opentlc.com
+  port:
+    targetPort: 8080-tcp
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: httpd
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2022-06-15T13:46:08Z"
+      status: "True"
+      type: Admitted
+    host: httpd-tommer-test.apps.cluster-vkkl4.vkkl4.sandbox853.opentlc.com
+    routerCanonicalHostname: router-default.apps.cluster-vkkl4.vkkl4.sandbox853.opentlc.com
+    routerName: default
+    wildcardPolicy: None
