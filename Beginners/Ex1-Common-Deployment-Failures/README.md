@@ -31,3 +31,14 @@ LAST SEEN   TYPE      REASON              OBJECT                        MESSAGE
 2m12s       Normal    BackOff             pod/httpd-xxxxxx              Back-off pulling image "registry.access.redhat.com/ubi9/httpd-24:lastest"
 5m39s       Warning   Failed              pod/httpd-xxxxxx              Error: ImagePullBackOff
 ```
+
+###### _Test Locally_
+```bash
+podman pull registry.access.redhat.com/ubi9/httpd-24:lastest
+```
+
+Go to the [RedHat Imgaes Catalog](https://catalog.redhat.com/software/containers/rhel8/httpd-24/5ba0addbbed8bd6ee819856a?container-tabs=gti) and make sure you downloaded the right image
+
+```bash
+podman pull registry.redhat.io/rhel8/httpd-24@sha256:4ac6f9969a15369f42bf6816a02eefaeef08b1c9331fc240d0262b897faba168
+```
