@@ -26,6 +26,7 @@
 * DNS forwarder bug
 * pv pending - wrong type
 * SCC & RBAC restriction
+* Quota & LimitRanges 
 
 ```bash
 oc adm top nodes
