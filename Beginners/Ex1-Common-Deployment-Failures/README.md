@@ -5,7 +5,7 @@ oc apply -f ../examples
 oc get pods
 ```
 
-###### _output_
+###### _Output_
 ```bash
 NAME                     READY   STATUS          
 httpd-xxxxxx             0/1     ErrImagePull 
