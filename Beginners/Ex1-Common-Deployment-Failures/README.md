@@ -1,4 +1,4 @@
-Deploy the example app:
+###### _Deploy the example app_
 
 ```bash
 oc apply -f ../examples
